@@ -1,0 +1,294 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 42 38% 97%;
+    --foreground: 155 28% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 155 28% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 155 28% 11%;
+
+    /* Тёмно-зелёный бренд */
+    --primary: 156 46% 21%;
+    --primary-foreground: 42 60% 96%;
+    --primary-soft: 150 32% 92%;
+
+    --secondary: 40 30% 93%;
+    --secondary-foreground: 155 28% 14%;
+    --muted: 40 26% 93%;
+    --muted-foreground: 150 7% 40%;
+
+    /* Тёплый кремовый акцент */
+    --accent: 38 62% 89%;
+    --accent-foreground: 28 38% 24%;
+    --cream: 38 64% 87%;
+    --cream-foreground: 28 40% 20%;
+
+    /* Семантика: превышение — коралловый */
+    --coral: 7 80% 60%;
+    --coral-foreground: 0 0% 100%;
+    --coral-soft: 8 90% 95%;
+
+    --macro-protein: 156 40% 32%;
+    --macro-fat: 36 82% 54%;
+    --macro-carbs: 202 42% 52%;
+
+    --border: 40 20% 89%;
+    --input: 40 18% 85%;
+    --ring: 156 46% 30%;
+    --shadow: 155 30% 12%;
+    --radius: 1.25rem;
+  }
+
+  .dark {
+    --background: 160 20% 6%;
+    --foreground: 40 30% 93%;
+    --card: 158 16% 9.5%;
+    --card-foreground: 40 30% 93%;
+    --popover: 158 16% 10.5%;
+    --popover-foreground: 40 30% 93%;
+
+    --primary: 148 38% 56%;
+    --primary-foreground: 160 32% 7%;
+    --primary-soft: 152 22% 15%;
+
+    --secondary: 158 12% 14%;
+    --secondary-foreground: 40 30% 92%;
+    --muted: 158 12% 13%;
+    --muted-foreground: 150 6% 62%;
+
+    --accent: 36 26% 18%;
+    --accent-foreground: 38 70% 84%;
+    --cream: 38 58% 82%;
+    --cream-foreground: 28 34% 14%;
+
+    --coral: 7 82% 66%;
+    --coral-foreground: 160 32% 7%;
+    --coral-soft: 7 38% 16%;
+
+    --macro-protein: 148 38% 56%;
+    --macro-fat: 36 78% 62%;
+    --macro-carbs: 202 50% 66%;
+
+    --border: 158 10% 16%;
+    --input: 158 10% 21%;
+    --ring: 148 38% 56%;
+    --shadow: 0 0% 0%;
+  }
+
+  /* Цветовые схемы (data-palette на <html>). «Шалфей» (sage) — значения выше. */
+  html[data-palette='ocean'] {
+    --background: 210 33% 97%;
+    --foreground: 215 35% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 35% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 35% 12%;
+    --primary: 211 62% 30%;
+    --primary-foreground: 210 60% 97%;
+    --primary-soft: 210 55% 93%;
+    --secondary: 210 28% 93%;
+    --secondary-foreground: 215 35% 14%;
+    --muted: 210 26% 93%;
+    --muted-foreground: 213 10% 42%;
+    --accent: 188 50% 88%;
+    --accent-foreground: 195 45% 20%;
+    --cream: 187 50% 83%;
+    --cream-foreground: 195 50% 18%;
+    --macro-protein: 211 55% 40%;
+    --macro-carbs: 168 45% 40%;
+    --border: 210 20% 89%;
+    --input: 210 18% 85%;
+    --ring: 211 62% 38%;
+    --shadow: 215 35% 12%;
+  }
+
+  html.dark[data-palette='ocean'] {
+    --background: 215 28% 7%;
+    --foreground: 210 30% 94%;
+    --card: 215 22% 10%;
+    --card-foreground: 210 30% 94%;
+    --popover: 215 22% 11%;
+    --popover-foreground: 210 30% 94%;
+    --primary: 205 75% 64%;
+    --primary-foreground: 215 40% 8%;
+    --primary-soft: 210 35% 17%;
+    --secondary: 215 16% 15%;
+    --secondary-foreground: 210 30% 92%;
+    --muted: 215 16% 14%;
+    --muted-foreground: 212 10% 64%;
+    --accent: 190 30% 18%;
+    --accent-foreground: 188 60% 84%;
+    --cream: 188 50% 78%;
+    --cream-foreground: 195 45% 12%;
+    --macro-protein: 205 75% 64%;
+    --macro-carbs: 168 50% 58%;
+    --border: 215 14% 18%;
+    --input: 215 14% 23%;
+    --ring: 205 75% 64%;
+    --shadow: 0 0% 0%;
+  }
+
+  html[data-palette='berry'] {
+    --background: 330 30% 97%;
+    --foreground: 330 30% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 330 30% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 330 30% 12%;
+    --primary: 327 54% 31%;
+    --primary-foreground: 330 60% 97%;
+    --primary-soft: 330 50% 93%;
+    --secondary: 330 24% 93%;
+    --secondary-foreground: 330 30% 14%;
+    --muted: 330 22% 93%;
+    --muted-foreground: 330 8% 42%;
+    --accent: 16 70% 90%;
+    --accent-foreground: 15 40% 24%;
+    --cream: 16 72% 87%;
+    --cream-foreground: 15 45% 22%;
+    --macro-protein: 327 45% 42%;
+    --border: 330 18% 89%;
+    --input: 330 16% 85%;
+    --ring: 327 54% 38%;
+    --shadow: 330 30% 12%;
+  }
+
+  html.dark[data-palette='berry'] {
+    --background: 330 20% 7%;
+    --foreground: 330 25% 94%;
+    --card: 330 16% 10%;
+    --card-foreground: 330 25% 94%;
+    --popover: 330 16% 11%;
+    --popover-foreground: 330 25% 94%;
+    --primary: 330 65% 70%;
+    --primary-foreground: 330 40% 8%;
+    --primary-soft: 330 28% 17%;
+    --secondary: 330 12% 15%;
+    --secondary-foreground: 330 25% 92%;
+    --muted: 330 12% 14%;
+    --muted-foreground: 330 8% 64%;
+    --accent: 15 30% 18%;
+    --accent-foreground: 15 70% 85%;
+    --cream: 16 65% 80%;
+    --cream-foreground: 15 40% 12%;
+    --macro-protein: 330 65% 70%;
+    --border: 330 10% 18%;
+    --input: 330 10% 23%;
+    --ring: 330 65% 70%;
+    --shadow: 0 0% 0%;
+  }
+
+  html[data-palette='amber'] {
+    --background: 38 45% 97%;
+    --foreground: 25 35% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 25 35% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 35% 12%;
+    --primary: 25 79% 34%;
+    --primary-foreground: 38 70% 97%;
+    --primary-soft: 32 70% 92%;
+    --secondary: 36 35% 92%;
+    --secondary-foreground: 25 35% 14%;
+    --muted: 36 32% 92%;
+    --muted-foreground: 28 10% 40%;
+    --accent: 43 82% 86%;
+    --accent-foreground: 30 50% 22%;
+    --cream: 43 84% 79%;
+    --cream-foreground: 30 55% 20%;
+    --macro-protein: 25 70% 40%;
+    --macro-fat: 46 90% 48%;
+    --coral: 350 72% 55%;
+    --coral-foreground: 0 0% 100%;
+    --coral-soft: 350 80% 95%;
+    --border: 36 22% 88%;
+    --input: 36 20% 84%;
+    --ring: 25 79% 40%;
+    --shadow: 25 35% 12%;
+  }
+
+  html.dark[data-palette='amber'] {
+    --background: 25 20% 7%;
+    --foreground: 38 30% 93%;
+    --card: 25 16% 10%;
+    --card-foreground: 38 30% 93%;
+    --popover: 25 16% 11%;
+    --popover-foreground: 38 30% 93%;
+    --primary: 30 85% 62%;
+    --primary-foreground: 25 45% 8%;
+    --primary-soft: 28 35% 16%;
+    --secondary: 25 12% 15%;
+    --secondary-foreground: 38 30% 92%;
+    --muted: 25 12% 14%;
+    --muted-foreground: 30 8% 63%;
+    --accent: 40 35% 18%;
+    --accent-foreground: 43 80% 82%;
+    --cream: 43 80% 75%;
+    --cream-foreground: 30 45% 12%;
+    --macro-protein: 30 85% 62%;
+    --macro-fat: 48 85% 60%;
+    --coral: 350 75% 66%;
+    --coral-foreground: 25 45% 8%;
+    --coral-soft: 350 35% 17%;
+    --border: 25 10% 18%;
+    --input: 25 10% 23%;
+    --ring: 30 85% 62%;
+    --shadow: 0 0% 0%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+
+  ::selection {
+    @apply bg-primary/20;
+  }
+
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+@layer utilities {
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top);
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
